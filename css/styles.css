@@ -4427,6 +4427,13 @@ input[type=button].btn-block {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
+.card:hover{
+  animation: motion 0.3s linear 0s infinite alternate; margin-top: 0;
+}
+@keyframes motion {
+	0% {margin-top: 0px;}
+	100% {margin-top: 10px;}
+}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -10363,4 +10370,63 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+/*스크롤 다운 모션*/
+
+.scrolldown
+{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scrolldown:hover {
+    cursor: pointer;
+}
+
+.scrolldown span
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    margin: -10px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    animation: animate 2s infinite;
+}
+
+.scrolldown span:nth-child(1)
+{
+    animation-delay: -0.4s;
+}
+
+/*
+.scrolldown span:nth-child(3)
+{
+    animation-delay: -0.2s;
+}
+*/
+/* 스크롤 다운 모션*/
+
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+      
+    }
+
+    50%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    
+    }
 }
